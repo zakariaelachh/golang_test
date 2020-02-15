@@ -1,0 +1,33 @@
+<html manifest="manifest.appcache">
+    <head>
+        {{if .Title}}
+        <title>AVITO - {{.Title}}</title>
+        {{else}}
+        <title>AVITO </title>
+        {{end}}
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="static/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="static/js/jquery-3.4.1.min.js"></script>
+        
+    </head>
+    <body>
+        <h1>{{ .Data }}</h1>
+        <small class="text-muted"> 
+            manage your profile from<a class="ml-2" href="/profile">here !</a>
+        </small>
+<!--       <script type="text/javascript">
+            // Register the service worker
+            window.addEventListener('load', () => {
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                // registration failed :(
+                  console.log('ServiceWorker registration failed: ', err);
+                });
+            }
+        })
+        </script> //--> 
+    </body>
+</html>
